@@ -1,4 +1,4 @@
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![Coverage Status](https://coveralls.io/repos/github/JefteCosta/comentarios-api/badge.svg?branch=main)](https://coveralls.io/github/JefteCosta/comentarios-api?branch=main)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![Coverage Status](https://coveralls.io/repos/github/JefteCosta/comentarios-api/badge.svg?branch=main)](https://coveralls.io/github/JefteCosta/comentarios-api?branch=main)[![codecov](https://codecov.io/gh/JefteCosta/comentarios-api/branch/main/graph/badge.svg?token=TEPAGE5RHC)](https://codecov.io/gh/JefteCosta/comentarios-api)
 # comment-api
 api de comentarios simple para web desenvolvida em nextjs e vuejs
 
