@@ -10,7 +10,8 @@
     "lint": "next lint",
     "release": "standard-version",
     "commit": "git-cz",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
