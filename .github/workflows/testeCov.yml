@@ -1,27 +1,33 @@
-on: ["push", "pull_request"]
+name: Test
 
-name: Test Coveralls
+on: ['push', 'pull_request']
 
 jobs:
-
-  build:
-    name: Build
+  code:
+    name: Test code
     runs-on: ubuntu-latest
+
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
-    - uses: actions/checkout@v1
+      - name: Set up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
 
-    - name: Use Node.js 10.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: 10.x
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
 
-    - name: npm install, make test-coverage
-      run: |
-        npm install
-        make test-coverage
+      - name: Run Jest
+        run: yarn test --coverage
 
-    - name: Coveralls
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
