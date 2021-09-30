@@ -31,7 +31,4 @@ jobs:
           flags: unittests
      
 
-      - name: Coveralls
-        uses: coverallsapp/github-action@master
-        with:
-          github-token: ${{ secrets.REPO_TOKEN }}
+      
