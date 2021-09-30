@@ -29,10 +29,7 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           flags: unittests
-      - name: npm install, make test-coverage
-        run: |
-          npm install
-          make test-coverage
+     
 
       - name: Coveralls
         uses: coverallsapp/github-action@master
