@@ -25,7 +25,7 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: Run Jest
-        run: yarn test --coverage
+        run: npm run coveralls --coverage
 
       - name: Coveralls
         uses: coverallsapp/github-action@master
