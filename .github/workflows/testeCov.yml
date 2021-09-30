@@ -24,8 +24,11 @@ jobs:
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
 
-      - name: Run Jest
-        run: yarn test --coverage
+      - name: Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          flags: unittests
 
       - name: Coveralls
         uses: coverallsapp/github-action@master
