@@ -4,7 +4,7 @@ const fs = require('fs')
 
 class  arquivo {
     constructor(){
-        this.file = './public/arquivos/database.json';
+        this.file = './database.json';
         this.dados = new Array();
     }
    
