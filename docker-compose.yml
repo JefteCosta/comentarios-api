@@ -1,0 +1,11 @@
+version: "3"
+services:
+    appnextjs:
+      image: appnextjs:v1
+      build: .
+      command: npm run pm2-start
+      ports:
+        - "3000:3000"
+      volumes: 
+        - .:/var/app-next
+     
