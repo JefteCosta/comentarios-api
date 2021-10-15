@@ -1,6 +1,6 @@
 import arquivo from "../../../../libs/arquivo"
 import {connectToDatabase } from "../../../../config/mongodb";
-export default async function handler(req, res){
+export default  function handler(req, res){
     // const arq = new arquivo();
    
     // const dados = arq.ler();
