@@ -1,6 +1,6 @@
 import arquivo from "../../../libs/arquivo"
 import {connectToDatabase } from "../../../config/mongodb";
-export default function newComent(req, res){
+export default async function newComent(req, res){
   const {
     body = {          
       email,
